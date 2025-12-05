@@ -14,7 +14,7 @@ const Testimonials = () => {
             <div className='flex flex-col min-[860px]:flex-row relative z-50 py-10 max-w-[1200px] min '>
                 <div className='relative  sm:block sm:w-[50%] md:w-[42%] min-[860px]:!w-[32%] lg:!w-[36%]'>
                     <div data-aos="img-gutter-only" data-aos-duration="1000" >
-                        <Image width={310} height={450} className='rounded-[9px] w-[320px] sm:w-[360px]' src={"/assets/s9.jfif"} alt="testimonial" />
+                        <Image width={310} height={450} className='rounded-[9px] w-[320px] sm:w-[360px]' src={"/assets/s9.jpg"} alt="testimonial" />
                     </div>
                     <div data-aos="fade-left" className='bg-skyBlue absolute px-4 rounded-[10px] top-6 sm:top-4 right-2 py-4'>
                         <Quote className='size-8 text-white' />

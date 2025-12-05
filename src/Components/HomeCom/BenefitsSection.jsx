@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 const CardData = [
     {
         id: 1,
-        image: "/assets/benefits1.jfif",  // Your image path
+        image: "/assets/benefits1.jpg",  // Your image path
         card: "/assets/benefits-card-1.png",
         bgColor: "#f59e0b", // ORANGE
         title: "Aplicación real desde el inicio",
@@ -13,7 +13,7 @@ const CardData = [
     },
     {
         id: 2,
-        image: "/assets/benefits2.jfif",  // Your image path
+        image: "/assets/benefits2.jpg",  // Your image path
         card: "/assets/benefits-card-2.png",
         bgColor: "#3b82f6", // BLUE
         title: "Máximo el potencial",
@@ -21,7 +21,7 @@ const CardData = [
     },
     {
         id: 3,
-        image: "/assets/benefits3.jfif",  // Your image path
+        image: "/assets/benefits3.jpg",  // Your image path
         card: "/assets/benefits-card-3.png",
         bgColor: "#8b5cf6", // PURPLE
         title: "Fomentar la innovación",
@@ -29,7 +29,7 @@ const CardData = [
     },
     {
         id: 4,
-        image: "/assets/benefits4.jfif",  // Your image path
+        image: "/assets/benefits4.jpg",  // Your image path
         card: "/assets/benefits-card-4.png",
         bgColor: "#10b981", // GREEN
         title: "Mejorar la retención",
