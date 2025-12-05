@@ -72,7 +72,7 @@ const ServiceSection = () => {
                         </div>
 
                         <div data-aos="zoom-in" className='flex justify-end pt-12 md:pt-0  lg:pr-2 min-[860px]:w-[40%] lg:!w-[35%]'>
-                            <Image alt={"services"} src={"/assets/Frame 40.jpg"} width={750} height={360}></Image>
+                            <Image alt={"services"} src={"/assets/Frame 40.jpg"} className="rounded-[12px]" width={750} height={360}></Image>
                         </div>
                     </div>
                     <div className='mt-12'>

@@ -46,8 +46,8 @@ export default function Navbar({ locoScroll }) {
                             <Image
                                 src="/logo.png"
                                 alt="Logo"
-                                width={80}
-                                height={60}
+                                width={100}
+                                height={80}
                                 className="w-150px"
                             />
                         </Link>
