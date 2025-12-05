@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --blue: linear-gradient(to right, #4895ef, #343ec2, #8d4aed);
+  --skyBlue: #5677F6;
+  --Manrope: "Manrope"
+}
+
+@theme inline {
+  --color-background: var(--background);
+
+  
+  --color-foreground: var(--foreground);
+  --color-blue: var(--blue);
+  --color-skyBlue: var(--skyBlue);
+  --font-Manrope: var(--Manrope);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: linear-gradient(to right, #4895ef, #343ec2, #8d4aed);
+  color: white;
+  font-family: "Manrope";
+}
+
+
+
+
+
+/* ROTATING GLOBE ANIMATION  */
+
+.rotate {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* MARQUEE ANIMATION  */
+.marquee-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-track.reverse {
+  animation-direction: reverse;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+/* ZOOM ANIMATION  */
+
+@keyframes big-zoom {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+[data-aos="big-zoom"] {
+  transform: scale(1.4);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos="big-zoom"].aos-animate {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+/* IMAGE GROW  */
+@keyframes zoomThenExpandSmooth {
+  0% {
+    transform: scale(0.97);
+    width: 60%;
+    border-radius: 0px;
+  }
+  40% {
+    transform: scale(1);
+    width: 90%;       /* zoom done, width still 60% */
+    border-radius: 0px;
+  }
+  50%{
+    width: 91%;       /* zoom done, width still 60% */
+    border-radius: 0px;
+  }
+  100% {
+    transform: scale(1);
+    width: 100%;      /* expand width smoothly */
+    border-radius: 10px;
+  }
+}
+
+[data-aos="img-sequential-smooth"] {
+  width: 60%;
+  transform: scale(0.9);
+  border-radius: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  animation-fill-mode: forwards;
+}
+
+[data-aos="img-sequential-smooth"].aos-animate {
+  animation: zoomThenExpandSmooth 1.5s ease-out forwards;
+}
+
+
+
+[data-aos="img-gutter-only"] {
+  transform: scale(0.8);    /* zoom-in start */
+  border-radius: 0px;       /* start border-radius */
+  padding-left: 2rem;     /* initial gutter */
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transition: 
+    transform 0.6s ease-out, 
+    border-radius 1.2s ease-out,
+    padding 1.2s ease-out;
+}
+
+[data-aos="img-gutter-only"].aos-animate {
+  transform: scale(1);      /* zoom-in done */
+  border-radius: 10px;       /* final rounded corners */
+  padding-left: 0rem;       /* expanded gutter */
+  padding-right: 0rem;
+}
+
+
+/* LENIS SMOOTH SCROLL - Disabled for normal scrolling */
+
+section {
+  position: relative;
+}
